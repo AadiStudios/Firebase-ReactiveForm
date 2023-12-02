@@ -1,0 +1,14 @@
+<p>list-students works!</p>
+
+<!-- <button (click)="readAllStudents()"> Get</button> -->
+<table>
+<tbody>
+    <tr *ngFor="let student of allStudents">
+        <td>{{student["student_name"]}}</td>
+        <td>{{student["date_of_birth"]}}</td>
+        <td>{{student["aadhar_number"]}}</td>
+
+    </tr>
+</tbody>
+
+</table>
