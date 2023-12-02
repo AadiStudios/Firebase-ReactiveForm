@@ -1,0 +1,41 @@
+<!-- <form #createStudentform = "ngForm" (ngSubmit)="submitForm()">
+    <div>
+    <label for ="student_name">Student Name:</label>
+    <input type="text" name ="student_name" formControlName="name"  />
+    </div>
+
+    
+    <div>
+        <label for ="date_of_birth">Date Of Birth:</label>
+        <input type="date" name ="date_of_birth" />
+    </div>
+    <div>
+        <label for ="aadhar_number">Aadhar Number:</label>
+        <input type="text" name="aadhar_number" formControlName="name" />
+    </div>
+    <div>
+        <button type ="submit"[disabled]="myForm.invalid">Submit</button>
+    </div>
+</form> -->
+
+
+<form [formGroup]="myForm" (ngSubmit)="submitForm()">
+    <div>
+      <label for="student_name">Student Name:</label>
+      <input type="text" id="student_name" formControlName="name" />
+    </div>
+  
+    <div>
+      <label for="date_of_birth">Date Of Birth:</label>
+      <input type="date" id="date_of_birth" formControlName="date_of_birth" />
+    </div>
+  
+    <div>
+      <label for="aadhar_number">Aadhar Number:</label>
+      <input type="text" id="aadhar_number" formControlName="aadhar_number" />
+    </div>
+  
+    <div>
+      <button type="submit" [disabled]="myForm.invalid">Submit</button>
+    </div>
+  </form>
